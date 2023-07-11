@@ -26,12 +26,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: sleep
-        run: sleep 4
         
-      - name: fail on main
-        if: github.event.pull_request.base.ref == 'master'   # check the target branch if it's master
-        steps:
-        - name: trigger
-          run: echo "Hii"
+  fail-if-main:  
+      runs-on: ubuntu-latest
+      if: github.event.pull_request.base.ref == 'main'   # check the target branch if it's main
+      steps:
+        - name: sleep
+          run: sleep 4
+        - name: exit
+          run: exit 1
