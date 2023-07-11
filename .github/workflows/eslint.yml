@@ -11,8 +11,6 @@ name: ESLint
 
 on:
   pull_request_target:
-    types:
-      - opened
     branches:
       - '*'
   push:
