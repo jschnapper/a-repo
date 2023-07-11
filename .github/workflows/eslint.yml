@@ -10,13 +10,13 @@
 name: ESLint
 
 on:
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - '*'
   push:
-    branches: [ "*" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "*" ]
-  schedule:
-    - cron: '16 15 * * 0'
+    branches: '*'
 
 jobs:
   eslint:
