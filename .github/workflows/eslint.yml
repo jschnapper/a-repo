@@ -11,12 +11,7 @@ name: ESLint
 
 on:
   pull_request:
-    types: 'edited'
-  pull_request_target:
-    branches:
-      - '*'
-  push:
-    branches: '*'
+    types: ['opened','edited']
 
 jobs:
   eslint:
