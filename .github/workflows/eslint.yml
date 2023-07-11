@@ -12,8 +12,8 @@ name: ESLint
 on:
   pull_request:
     types: ['opened','edited']
-  push:
-    branches: '8'
+  pull_request_target:
+    branches: '*'
 
 jobs:
   eslint:
@@ -28,4 +28,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: sleep
-        run: sleep 3
+        run: sleep 4
+        
+      - name: fail on main
+        if: github.event.pull_request.base.ref == 'master'   # check the target branch if it's master
+        steps:
+        - name: trigger
+          run: echo "Hii"
