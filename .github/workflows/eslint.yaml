@@ -17,7 +17,7 @@ on:
 
 jobs:        
   other:
-      name: "this is the potato"
+      name: "thislongname/forthisstatuscheck/nestagain/andagain"
       runs-on: ubuntu-latest
       steps:
         - name: sleep
