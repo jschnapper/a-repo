@@ -16,7 +16,8 @@ on:
     branches: '*'
 
 jobs:        
-  potato:  
+  fail:
+      name: "this is the potato"
       runs-on: ubuntu-latest
       steps:
         - name: sleep
