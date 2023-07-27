@@ -21,5 +21,3 @@ jobs:
       steps:
         - name: sleep
           run: sleep 4
-        - name: exit
-          run: exit 1
